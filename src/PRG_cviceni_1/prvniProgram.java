@@ -31,3 +31,4 @@ public class prvniProgram {
 
 //Zatím nefunkční
 //Má za úkol načíst od uživatele jména hráčů a skóré hráču a potom skoré porovnat a vypsat tabulku s úmístěním
+//Zkouska jestli funguje GIT :)

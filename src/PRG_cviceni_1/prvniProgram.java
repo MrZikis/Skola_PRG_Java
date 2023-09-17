@@ -7,23 +7,23 @@ public class prvniProgram {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);  //Vytvoří scanner
 
-        String[] jmena = {};
-        int[] skore = {};
+        System.out.println("Jak velké pole?");
+        int velikostPole = sc.nextInt() + 1;
 
-        System.out.println("Kolik je hráčů?");
-        int pocetHracu = sc.nextInt();
+        String jmena[];
+        jmena = new String[velikostPole];
 
-
-        for (int i = 1; i < pocetHracu; i++) {
-            System.out.println("Informace o hráči " + i);
-            System.out.println("Jméno hráče:");
-            jmena[i] = sc.nextLine();
-            System.out.println("Skóre: ");
-            skore[i] = sc.nextInt();
+        System.out.println("Vypiš jména: ");
+        for (int k = 0; k < jmena.length; k++) {
+            System.out.println("Zadej jméno číslo " + (k + 1) + ":");
+            jmena[k] = sc.nextLine();
         }
 
-        System.out.println(Arrays.toString(jmena));
-        System.out.println(Arrays.toString(skore));
+//        System.out.println(jmena[0]);
+//        for (int i = 0; i < jmena.length; i++) {
+//            System.out.println(jmena[i]);
+//        }
+
 
 
     }

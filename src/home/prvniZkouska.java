@@ -8,5 +8,6 @@ public class prvniZkouska {
             y = (int) (Math.random() * 45 + 1);
             System.out.println(y);
         }
+//        Tohle jsem upravil na školním počítači
     }
 }

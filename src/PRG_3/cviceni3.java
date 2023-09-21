@@ -19,23 +19,30 @@ public class cviceni3 {
 
         // Další cvičení
 
-        System.out.println("Za kolik jsi nakoupil?");
-        int cena = sc.nextInt();
-        System.out.println("Máš kupón?");
-        boolean discountTicket = sc.nextBoolean();
-        int finalCena = 0;
+//        System.out.println("Za kolik jsi nakoupil?");
+//        int cena = sc.nextInt();
+//        System.out.println("Máš kupón?");
+//        boolean discountTicket = sc.nextBoolean();
+//        int finalCena = 0;
+//
+//        if (discountTicket == true) {
+//            if (cena >= 100) {
+//                finalCena = (int)(cena * 0.8);
+//            } else if (cena >= 50) {
+//                finalCena = (int)(cena * 0.9);
+//            } else {
+//                finalCena = cena;
+//            }
+//            System.out.println("Se slevou je cena: " + finalCena);
+//        } else {
+//            System.out.println("Bez kuponu je cena: " + cena);
+//        }
 
-        if (discountTicket == true) {
-            if (cena >= 100) {
-                finalCena = (int)(cena * 0.8);
-            } else if (cena >= 50) {
-                finalCena = (int)(cena * 0.9);
-            } else {
-                finalCena = cena;
-            }
-            System.out.println("Se slevou je cena: " + finalCena);
-        } else {
-            System.out.println("Bez kuponu je cena: " + cena);
-        }
+
+        // Je rok přestupný?
+        if((year % 4 == 0 && year % 4 != 100) || (year % 100))
+
     }
 }
+
+

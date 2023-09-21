@@ -1,8 +1,8 @@
-package PRG_3;
+package PRG_2;
 
 import java.util.Scanner;
 
-public class cviceni3 {
+public class cviceni2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -40,7 +40,10 @@ public class cviceni3 {
 
 
         // Je rok přestupný?
-        if((year % 4 == 0 && year % 4 != 100) || (year % 100))
+//        int year = sc.nextInt();
+//        if((year % 4 == 0 && year % 4 != 100) || (year % 100 != 0) {
+//            System.out.println("hello");
+//        }
 
     }
 }

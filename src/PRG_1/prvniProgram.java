@@ -1,6 +1,5 @@
-package PRG_cviceni_1;
+package PRG_1;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class prvniProgram {
@@ -18,8 +17,7 @@ public class prvniProgram {
             System.out.println("Zadej jméno číslo " + (k + 1) + ":");
             jmena[k] = sc.nextLine();
         }
-        
-//        Tohle jsem přidal z Githubu, snad se to updatuje....     
+
 //        System.out.println(jmena[0]);
 //        for (int i = 0; i < jmena.length; i++) {
 //            System.out.println(jmena[i]);

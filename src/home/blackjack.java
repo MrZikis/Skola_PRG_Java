@@ -29,71 +29,171 @@ public class blackjack {
         kartyHrac2.add((int)(Math.random() * 11 + 1));
         kartyHrac2.add((int)(Math.random() * 11 + 1));
 
-        while(chciHratHrac1 || chciHratHrac2) {
+
+        clearConsole();
+        System.out.println("                        ------------------------------");
+        System.out.println("                        Vítejte ve hře Blackjack DEMO!");
+        System.out.println("                        ------------------------------");
+        System.out.println(" Úkolem hry je mít součtem všech karet nejbližší číslo k 21.");
+        System.out.println(" Na začátku každý hráč dostane 2 karty, poté se rozhoduje zda si lízne další kartu nebo ukončí svoje karty.");
+        System.out.println(" Kartu si lze líznout pokud hráč bude mít méně jak 21 a neukončil svoje karty");
+        System.out.println(" Lízaní se střídá - nejdříve hraje hráč 1 a následně hráč 2");
+        System.out.println(" Jakmile si už nikdo nebude moci líznout kartu, hra se vyhodnotí a oznámí kdo vyhrál");
+        System.out.println(" Přeji hodně štěstí!");
+        System.out.println(" --------");
+        System.out.println(" ");
+        System.out.println(" Pro start hry zmáčkni -> ENTER <-");
+        sc.nextLine();
+        clearConsole();
+        System.out.println(" Zadej jméno pro hráče 1: (bez diakritiky)\n");
+        System.out.print(" "); String jmenoHrac1 = sc.nextLine();
+        clearConsole();
+        System.out.println(" Zadej jméno pro hráče 2: (bez diakritiky)\n");
+        System.out.print(" "); String jmenoHrac2 = sc.nextLine();
+
+        while(chciHratHrac1) {
+            clearConsole();
             if (chciHratHrac1) {
-                System.out.println("Karty hráče 1:");
-                for (int karta: kartyHrac1) {
-                    System.out.print(karta + " ");
-                }
-                System.out.println("\nPřeješ si vzít ještě jednu kartu (true) nebo stát (false)");
-                liznoutHrac1 = sc.nextBoolean();
-                if (liznoutHrac1) {
-                    int liznutaKarta = (int)(Math.random() * 11 + 1);
-                    System.out.println("Líznul jsis: " + liznutaKarta);
-                    kartyHrac1.add(liznutaKarta);
-                    System.out.println("Karty hráče 1:");
-                    for (int karta: kartyHrac1) {
-                        System.out.print(karta + " ");
+                System.out.println(" " + jmenoHrac1);
+                for (int karta : kartyHrac1) {
+                    if (karta >= 10) {
+                        System.out.println("  ---- ");
+                        System.out.println(" |    |");
+                        System.out.println(" | " + karta + " |");
+                        System.out.println(" |    |");
+                        System.out.println("  ----");
+                    } else {
+                        System.out.println("  --- ");
+                        System.out.println(" |   |");
+                        System.out.println(" | " + karta + " |");
+                        System.out.println(" |   |");
+                        System.out.println("  ---");
                     }
+                }
+                System.out.println(" Celkem: " + sectiKarty(kartyHrac1));
+                System.out.println("\n Přeješ si vzít ještě jednu kartu (true) nebo stát (false)");
+                System.out.print(" "); liznoutHrac1 = sc.nextBoolean();
+                if (liznoutHrac1) {
+                    clearConsole();
+                    int liznutaKarta = (int) (Math.random() * 11 + 1);
+                    System.out.println(" " + jmenoHrac1);
+                    System.out.println(" Líznul jsis: " + liznutaKarta);
+                    kartyHrac1.add(liznutaKarta);
+                    for (int karta : kartyHrac1) {
+                        if (karta >= 10) {
+                            System.out.println("  ---- ");
+                            System.out.println(" |    |");
+                            System.out.println(" | " + karta + " |");
+                            System.out.println(" |    |");
+                            System.out.println("  ----");
+                        } else {
+                            System.out.println("  --- ");
+                            System.out.println(" |   |");
+                            System.out.println(" | " + karta + " |");
+                            System.out.println(" |   |");
+                            System.out.println("  ---");
+                        }
+                    }
+                    System.out.println(" Celkem: " + sectiKarty(kartyHrac1));
                     if (sectiKarty(kartyHrac1) > 21) {
-                        System.out.println("Přesáhl jsi 21! Pro výhru ti musí chybět méně k 21 než druhému hráči.");
+                        System.out.println("\n --------------------------------------------------------------------");
+                        System.out.println(" Přesáhl jsi 21! Pro výhru ti musí chybět méně k 21 než druhému hráči.");
+                        System.out.println(" ---------------------------------------------------------------------");
                         chciHratHrac1 = false;
                     }
+                    System.out.println("\n Pokračovat (enter)");
+                    sc.nextLine();
+                    sc.nextLine();
                 } else {
                     chciHratHrac1 = false;
+                    System.out.println("\n Pokračovat (enter)");
+                    sc.nextLine();
+
                 }
 
             }
+        }
+            sc.nextLine();
+            clearConsole();
+
+        while (chciHratHrac2) {
+            clearConsole();
             if (chciHratHrac2) {
-                System.out.println("\nKarty hráče 2:");
-                for (int karta: kartyHrac2) {
-                    System.out.print(karta + " ");
-                }
-                System.out.println("\nPřeješ si vzít ještě jednu kartu (true) nebo stát (false)");
-                liznoutHrac2 = sc.nextBoolean();
-                if (liznoutHrac2) {
-                    int liznutaKarta = (int)(Math.random() * 11 + 1);
-                    System.out.println("Líznul jsis: " + liznutaKarta);
-                    kartyHrac2.add(liznutaKarta);
-                    System.out.println("Karty hráče 2:");
-                    for (int karta: kartyHrac2) {
-                        System.out.print(karta + " ");
+                System.out.println(" " + jmenoHrac2);
+                for (int karta : kartyHrac2) {
+                    if (karta >= 10) {
+                        System.out.println("  ---- ");
+                        System.out.println(" |    |");
+                        System.out.println(" | " + karta + " |");
+                        System.out.println(" |    |");
+                        System.out.println("  ----");
+                    } else {
+                        System.out.println("  --- ");
+                        System.out.println(" |   |");
+                        System.out.println(" | " + karta + " |");
+                        System.out.println(" |   |");
+                        System.out.println("  ---");
                     }
+                }
+                System.out.println(" Celkem: " + sectiKarty(kartyHrac2));
+                System.out.println("\n Přeješ si vzít ještě jednu kartu (true) nebo stát (false)");
+                System.out.print(" ");liznoutHrac2 = sc.nextBoolean();
+                if (liznoutHrac2) {
+                    clearConsole();
+                    int liznutaKarta = (int) (Math.random() * 11 + 1);
+                    System.out.println(" " + jmenoHrac2);
+                    System.out.println(" Líznul jsis: " + liznutaKarta);
+                    kartyHrac2.add(liznutaKarta);
+                    for (int karta : kartyHrac2) {
+                        if (karta >= 10) {
+                            System.out.println("  ---- ");
+                            System.out.println(" |    |");
+                            System.out.println(" | " + karta + " |");
+                            System.out.println(" |    |");
+                            System.out.println("  ----");
+                        } else {
+                            System.out.println("  --- ");
+                            System.out.println(" |   |");
+                            System.out.println(" | " + karta + " |");
+                            System.out.println(" |   |");
+                            System.out.println("  ---");
+                        }
+                    }
+                    System.out.println(" Celkem: " + sectiKarty(kartyHrac2));
                     if (sectiKarty(kartyHrac2) > 21) {
-                        System.out.println("Přesáhl jsi 21! Pro výhru ti musí chybět méně k 21 než druhému hráči.");
+                        System.out.println("\n --------------------------------------------------------------------");
+                        System.out.println(" Přesáhl jsi 21! Pro výhru ti musí chybět méně k 21 než druhému hráči.");
+                        System.out.println(" --------------------------------------------------------------------");
                         chciHratHrac2 = false;
                     }
+                    System.out.println("\n Pokračovat (enter)");
+                    sc.nextLine();
+                    sc.nextLine();
                 } else {
                     chciHratHrac2 = false;
+                    System.out.println("\n Pokračovat (enter)");
+                    sc.nextLine();
+
                 }
 
             }
         }
 
+        clearConsole();
         System.out.println("Vyhodnocování");
         String vyhra;
 
         if ( (Math.abs(21 - sectiKarty(kartyHrac2))) > (Math.abs(21 - sectiKarty(kartyHrac1))) ) {
-            vyhra = "Hru vyhrál hráč 1! K 21 mu chybělo: " + Math.abs(21 - sectiKarty(kartyHrac1)) + " bodů." ;
+            vyhra = "Hru vyhrál " + jmenoHrac1 + "! K 21 mu chybělo: " + Math.abs(21 - sectiKarty(kartyHrac1)) + " bodů." ;
 
         } else if ( (Math.abs(21 - sectiKarty(kartyHrac2))) < (Math.abs(21 - sectiKarty(kartyHrac1))) ) {
-            vyhra = "Hru vyhrál hráč 2! K 21 mu chybělo: " + Math.abs(21 - sectiKarty(kartyHrac2)) + " bodů." ;
+            vyhra = "Hru vyhrál " + jmenoHrac2 + "! K 21 mu chybělo: " + Math.abs(21 - sectiKarty(kartyHrac2)) + " bodů." ;
 
         } else if ( (Math.abs(21 - sectiKarty(kartyHrac2))) == (Math.abs(21 - sectiKarty(kartyHrac1))) ) {
             vyhra = "Je to remíza! Oboum hráčům zbývalo " + Math.abs(21 - sectiKarty(kartyHrac1)) + " bodů." ;
 
         } else {
-            System.out.println("Chyby při vyhodnocování");
+            System.out.println("Chyba při vyhodnocování");
             return;
         }
 
@@ -111,8 +211,13 @@ public class blackjack {
                 cas++;
 
                 if (cas == casVyhodnoceni) {
-                    System.out.println("\nVýsledky: \nhráč 1 má " + sectiKarty(kartyHrac1) + " bodů." + "\nhráč 2 má " + sectiKarty(kartyHrac2) + " bodů.");
-                    System.out.println(vyhra);
+                    clearConsole();
+                    System.out.println("   --------------");
+                    System.out.println("      Výsledky   ");
+                    System.out.println("   --------------");
+                    System.out.println("\n " + jmenoHrac1 + " má " + sectiKarty(kartyHrac1) + " bodů." + "\n " + jmenoHrac2 +" má " + sectiKarty(kartyHrac2) + " bodů.");
+                    System.out.println(" ");
+                    System.out.println(" " + vyhra);
                     timer.cancel(); // Ukončíme časovač
                 }
             }
@@ -133,6 +238,23 @@ public class blackjack {
         }
 
         return soucet;
+    }
+
+    public static void clearConsole() {
+        try {
+            final String os = System.getProperty("os.name");
+
+            if (os.contains("Windows")) {
+                // Pokud používáte Windows, použijte "cls" k vyčištění konzole
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } else {
+                // Pokud používáte jiný operační systém, použijte "clear" nebo "reset"
+                new ProcessBuilder("clear").inheritIO().start().waitFor();
+            }
+        } catch (final Exception e) {
+            // Obsluha chyb, pokud proces vyčištění konzole selže
+            e.printStackTrace();
+        }
     }
 
 }

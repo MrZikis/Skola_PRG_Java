@@ -56,7 +56,7 @@ public class test01 {
         int hrac1 = sc.nextInt(); //18
         int hrac2 = sc.nextInt(); //16
 
-        if ((Math.abs( 21 - hrac1) < (Math.abs( 21 - hrac2)) {
+        if ((Math.abs( 21 - hrac1)) < (Math.abs( 21 - hrac2))) {
             System.out.println("Hrac 1 vyhrava");
         } else {
             System.out.println("Hrac2 vyhrava");

@@ -38,6 +38,9 @@ public class loops {
 //        System.out.println("FUCK NIGGERS");
 
 //        Zkouška
+        for (int i = 0; i < 100; i++) {
+            System.out.println("Hermelín");
+        }
 
     }
 }

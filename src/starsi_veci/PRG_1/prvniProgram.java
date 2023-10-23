@@ -1,4 +1,4 @@
-package PRG_1;
+package starsi_veci.PRG_1;
 
 import java.util.Scanner;
 

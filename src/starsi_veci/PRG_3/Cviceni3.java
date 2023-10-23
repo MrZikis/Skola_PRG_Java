@@ -1,6 +1,5 @@
-package PRG_3;
+package starsi_veci.PRG_3;
 
-import java.util.Map;
 import java.util.Scanner;
 
 public class Cviceni3 {

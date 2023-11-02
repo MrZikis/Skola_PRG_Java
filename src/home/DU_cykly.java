@@ -67,5 +67,16 @@ public class DU_cykly {
 //                }
 //                System.out.println("");
 //        }
+
+        // SAMOVA RETARDOVANA VERZE
+//        int velikost = sc.nextInt();
+//        for (int i = 1; i <= velikost*velikost; i++) {
+//            if (i % velikost == 0) {
+//                System.out.println(i);
+//            } else {
+//                System.out.print(i+"\t");
+//            }
+//        }
+
     }
 }

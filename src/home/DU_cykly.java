@@ -58,15 +58,15 @@ public class DU_cykly {
 
 
         // Ukol 5
-//        int n = sc.nextInt();
-//
-//        for (int i = 0; i < n; i++) {
-//                for (int j = 1; j <= n; j++) {
-//                    System.out.print(j + (i*n));
-//                    System.out.print("\t");
-//                }
-//                System.out.println("");
-//        }
+        int n = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+                for (int j = 1; j <= n; j++) {
+                    System.out.print(j + (i*n));
+                    System.out.print("\t");
+                }
+                System.out.println("");
+        }
 
         // SAMOVA RETARDOVANA VERZE
 //        int velikost = sc.nextInt();

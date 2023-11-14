@@ -146,7 +146,7 @@ public class DU_arrays {
                 }
             }
             if (correct) {
-                System.err.print(guesses[i] + "\t");
+                System.out.print("\u001B[31m" + guesses[i] + "\t" +  "\u001B[0m");
             } else {
                 System.out.print(guesses[i] + "\t");
             }

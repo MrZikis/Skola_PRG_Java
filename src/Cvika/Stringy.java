@@ -1,32 +1,34 @@
 package Cvika;
 
 public class Stringy {
-    String test = "testicek";
 
-    // Je tam něco ?
-    // test.contains
+    public static void main(String[] args) {
+        String test = "testicek";
 
-    // Je něco někde
-    // text.charAt(index)
+        // Je tam něco ?
+        // test.contains
 
-    //Je stejný ?
-    //test.equals(string s kterým to chci porovnat)
+        // Je něco někde
+        // text.charAt(index)
 
-    // Spojení stringů
-    // test + test
+        //Je stejný ?
+        //test.equals(string s kterým to chci porovnat)
 
-    // Oddělovač
-    // text.split(znak oddělovače)
+        // Spojení stringů
+        // test + test
 
-    //Parsing
-    //int something = Integer.parseInt(string ktery chceme prevest);
+        // Oddělovač
+        // text.split(znak oddělovače)
 
-    //Practice
+        //Parsing
+        //int something = Integer.parseInt(string ktery chceme prevest);
 
-    //Validace RC
-    //zkontroluje, ze je RC v poho
-    //Napíše jestli je muž nebo žena
-    String rc = "000209/2121";
+        //Practice
+
+        //Validace RC
+        //zkontroluje, ze je RC v poho
+        //Napíše jestli je muž nebo žena
+        String rc = "000209/2121";
 //    if(rc.lenght() == 11) {
 //        System.out.println("Delka je oukej");
 //        if (rc.charAt(6) == '/') {
@@ -43,5 +45,7 @@ public class Stringy {
 //        System.out.println("Špatná délka");
 //    }
 
+
+    }
 
 }

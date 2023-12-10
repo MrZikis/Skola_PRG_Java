@@ -1,2 +1,8 @@
 -- PLUGINS --
 Atomic Icons
+
+
+-- Usefull  methody pro stringy --
+.split("znak oddelovace")          -> oddělí text pomocí podle znaku a vrátí pole
+.trim()                            -> odstraní mezery a tabulátory
+.equals(druhý string k porovnání)  -> porovná dva stringy jestli jsou stejný

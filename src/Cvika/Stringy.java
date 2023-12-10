@@ -5,6 +5,7 @@ public class Stringy {
     public static void main(String[] args) {
         String test = "testicek";
 
+
         // Je tam něco ?
         // test.contains
 
